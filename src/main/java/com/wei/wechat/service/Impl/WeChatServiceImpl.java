@@ -10,11 +10,18 @@ import java.util.Date;
 public class WeChatServiceImpl implements WeChatService {
 
 
+    /**
+     * 关注公众号的事件
+     *
+     * @param weChat
+     * @return
+     */
     @Override
     public String Event(WeChatBO weChat) {
         StringBuilder sb = new StringBuilder();
         //如果是订阅消息
-        if (WeChatBO.SUBSCRIPTION_MSG_TYPE_EVENT.equals(weChat.getMsgType()) && WeChatBO.SUBSCRIPTION_MESSAGE.equals(weChat.getEvent())) {
+        if (WeChatBO.SUBSCRIPTION_MSG_TYPE_EVENT.equals(weChat.getMsgType()) && WeChatBO.SUBSCRIPTION_MESSAGE.equals(weChat.getEvent())
+                || "rset_my_menu".equals(weChat.getEventKey())) {
             //成功订阅则返回图文菜单
             sb.append("<xml>");
             sb.append("<ToUserName>").append(weChat.getFromUserName()).append("</ToUserName>");
