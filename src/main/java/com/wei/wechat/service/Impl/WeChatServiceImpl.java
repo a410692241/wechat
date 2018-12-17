@@ -24,6 +24,7 @@ public class WeChatServiceImpl implements WeChatService {
                 || "rset_my_menu".equals(weChat.getEventKey())) {
             //成功订阅则返回图文菜单
             sb.append("<xml>");
+
             sb.append("<ToUserName>").append(weChat.getFromUserName()).append("</ToUserName>");
             sb.append("<FromUserName>").append(weChat.getToUserName()).append("</FromUserName>");
             sb.append("<MsgType>").append("news").append("</MsgType>");
@@ -47,10 +48,10 @@ public class WeChatServiceImpl implements WeChatService {
             sb.append("</item>");
 
             sb.append("<item>");
-            sb.append("<Title>").append("点击定位").append("</Title>");
+            sb.append("<Title>").append("定位").append("</Title>");
             sb.append("<Description>").append("可获取当前您所在的位置!").append("</Description>");
-            sb.append("<PicUrl>").append("https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=388329788,3347197955&fm=58&bpow=512&bpoh=512").append("</PicUrl>");
-            sb.append("<Url>").append("https://www.amap.com/").append("</Url>");
+            sb.append("<PicUrl>").append("https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3525231440,2817999830&fm=26&gp=0.jpg").append("</PicUrl>");
+            sb.append("<Url>").append("http://verygoodak.free.idcfengye.com/location/myMap").append("</Url>");
             sb.append("</item>");
 
             sb.append("</Articles>").append("</xml>");

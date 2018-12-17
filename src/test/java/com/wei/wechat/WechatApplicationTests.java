@@ -14,7 +14,7 @@ public class WechatApplicationTests {
     public static final String appID = "wxa3c220d935cba583";
     public static final String appsecret = "bacc6d6a0a630283d3f4bf3b30b49b7c";
     public static final String GET_ACCESS_TOKEN_URL = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=" + appID + "&secret=" + appsecret;
-    public static final String ACCESS_TOKEN = "16_47eWoSU7t4GpCoeAjudMU6z-RWRKk1C-DJsruieFD8GUTUJ8IP7Sj-ZetY9NBVe5HWsoJ2-HUK-5GdP_0OMoumS57ECI5EWccgvsIk8TieMb8NX4gfdhxg66eqPvsPFsPdeZzbneOfVDVpXyGEPcAAAXVG";
+    public static final String ACCESS_TOKEN = "16_noIEKkV0zg3hnzfjeqiyJ_-DLlYNZfX5Q2ZcC1WTWelU8V9JSEIn6FgDac-6W1jizzKS7OJk5eXih9WZl5wdU-behJtRNMU0Q3QvDAGp5LTszCfWEMiyc9S6KREZVPdABAEAU";
     public static final String MENU_URL = "http://api.weixin.qq.com/cgi-bin/menu/create?access_token="+ACCESS_TOKEN;
     @Test
     public void contextLoads() {
@@ -42,7 +42,7 @@ public class WechatApplicationTests {
 
         //二级菜单
         sb.append("{");
-        sb.append("\"name\":").append("\"二级菜单\",");
+        sb.append("\"name\":").append("\"菜单\",");
         sb.append("\"type\":").append("\"view\",");
         sb.append("\"url\":").append("\"http://www.baidu.com\"");
         sb.append("}");
